@@ -1,0 +1,35 @@
+<div class="container my-5">
+  <div class="row mb-4">
+    <div class="titulo text-center">
+      <img src="https://pbs.twimg.com/profile_images/993674618652254208/dYmlscab_400x400.jpg" alt="TV Icon" class="img-fluid" style="width: 80px; height: auto;"> <!-- Reemplaza con tu icono real -->
+      <h5 class="mt-2">TV Series</h5>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover table-striped table-bordered text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Channel</th>
+            <th>Seasons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let serie of data_series">
+            <th>{{serie.id}}</th>
+            <td>{{serie.name}}</td>
+            <td>{{serie.channel}}</td>
+            <td>{{serie.seasons}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-right mt-2">
+        <p><strong>Seasons Average:</strong> {{avg}}</p>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
